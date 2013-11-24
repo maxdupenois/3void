@@ -20,17 +20,17 @@
       .col-lg-10.col-lg-offset-1
         .navbar
           %ul.nav.navbar-nav
-            %li{class: nav_active(root_path)}
-              %a{href: "/", title: "Home"}
+            %li{class: nav_active(main_app.root_path)}
+              %a{href: main_app.root_path, title: "Home"}
                 Home 
             %li{class: nav_active(marticles.root_path)} 
               %a{href: marticles.root_path, title: "Articles"}
                 Articles
-            %li{class: nav_active("")} 
-              %a{href: projects_path, title: "Projects"}
+            %li{class: nav_active(main_app.projects_path)} 
+              %a{href: main_app.projects_path, title: "Projects"}
                 Projects
-            %li{class: nav_active("")} 
-              %a{href: "#", title: "Academic"}
+            %li{class: nav_active(main_app.academic_path)} 
+              %a{href: main_app.academic_path, title: "Academic"}
                 Academic
 
 

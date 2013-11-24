@@ -1,7 +1,7 @@
 $title: Sinatra Connections
 $author: Max
 $tags: sinatra, api, technical, bug
-$published: true
+$published: false
 
 ##The Prelude
 
