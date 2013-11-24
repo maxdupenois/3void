@@ -1,0 +1,40 @@
+=content_for(:page_title, "Projects")
+%p.welcome
+  These are some of the coding projects I've worked on separate to any form of relevance to work. Some are old and the coding quality varies as I've learnt new things or got carried away with an idea.
+
+.alert.alert-info
+  NB: Nearly all of these should be considered work in progress or libraries of old code for me to easily reference and recall.
+
+%ul.nav.nav-tabs
+  %li.active
+    %a{href: '#marti', data: {toggle: 'tab'}} Marti
+  %li
+    %a{href: '#dilemma', data: {toggle: 'tab'}} Dilemma
+  %li
+    %a{href: '#tracert', data: {toggle: 'tab'}} TraceRT
+  %li
+    %a{href: '#toroidwars', data: {toggle: 'tab'}} Toroid Wars
+  %li
+    %a{href: '#code2html', data: {toggle: 'tab'}} Code2HTML
+  %li
+    %a{href: '#basic-game-engine', data: {toggle: 'tab'}} Basic Game Engine
+.tab-content
+  #marti.tab-pane.active
+    .project
+      =render partial: "marti"
+  #dilemma.tab-pane
+    .project
+      =render partial: "dilemma"
+  #tracert.tab-pane
+    .project
+      =render partial: "tracert"
+  #toroidwars.tab-pane
+    .project
+      =render partial: "toroidwars"
+  #code2html.tab-pane
+    .project
+      =render partial: "code2html"
+  #basic-game-engine.tab-pane
+    .project
+      =render partial: "basic_game_engine"
+

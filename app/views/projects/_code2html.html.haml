@@ -1,0 +1,12 @@
+%h3 Code2HTML
+.tags.meta
+  %span.glyphicon.glyphicon-tags
+  Java, text parsing
+.code.meta
+  %span.glyphicon.glyphicon-file
+  %a{href: 'https://github.com/maxdupenois/code2html', title: 'Code2HTML'}
+    https://github.com/maxdupenois/code2html
+
+%p 
+  A simple code parser, I used this to create the code entries for an old wordpress blog. It uses a mixture of iterating over the file for specific code blocks and regular expressions. The difficulty, strangely, was in identifying quote blocks, particluarly for things like an apostrophe as it needs to be identified as unpaired with a closing single quote. Currently it parses files for PhP and for Java, but more can be pretty easily added, look at the existing parsers as an example.
+

@@ -15,20 +15,21 @@
             %img{src: asset_path('logo_200x89.png'), title: "3Void"}
         %h3.page-title
           =content_for?(:page_title) ? yield(:page_title) : "A page"
+
     .row.navigation
       .col-lg-10.col-lg-offset-1
         .navbar
           %ul.nav.navbar-nav
-            %li
+            %li{class: nav_active(root_path)}
               %a{href: "/", title: "Home"}
-                Home
-            %li 
+                Home 
+            %li{class: nav_active(marticles.root_path)} 
               %a{href: marticles.root_path, title: "Articles"}
                 Articles
-            %li 
-              %a{href: "#", title: "Projects"}
+            %li{class: nav_active("")} 
+              %a{href: projects_path, title: "Projects"}
                 Projects
-            %li 
+            %li{class: nav_active("")} 
               %a{href: "#", title: "Academic"}
                 Academic
 
