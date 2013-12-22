@@ -1,9 +1,0 @@
--content_for(:page_title, "Articles")
-.article
-  .article-header
-    %h2.article-title=@article.title
-    %h4.article-author by #{@article.author}
-
-
-  =@article.content.html_safe
-

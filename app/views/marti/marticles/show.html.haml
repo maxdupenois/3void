@@ -1,0 +1,8 @@
+-content_for(:page_title, "Articles")
+.article
+  .article-header
+    %h2.article-title=@marticle.title
+    %h4.article-author by #{@marticle.author}
+
+
+  =@marticle.content.html_safe
