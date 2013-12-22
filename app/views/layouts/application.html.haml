@@ -10,7 +10,20 @@
   %body{class: "#{params[:controller]} #{params[:controller]}-#{params[:action]}"}
 
     .row.header
-      .col-lg-4.col-lg-offset-7
+      .col-lg-3.col-lg-offset-1
+        %ul.social-link-list
+          %li
+            %a{href: 'http://www.linkedin.com/pub/maximillian-dupenois/35/935/255', title: 'LinkedIn Profile', target: '_blank'}
+              =image_tag('linkedin-icon.png')
+          %li
+            %a{href: 'https://github.com/maxdupenois', title: 'Github Profile', target: '_blank'}
+              =image_tag('github-icon.jpg')
+          %li
+            %a{href: 'https://twitter.com/maxdupenois', title: 'Twitter Profile', target: '_blank'}
+              =image_tag('twitter-icon.png')
+          .clearfix
+
+      .col-lg-4.col-lg-offset-3
         .logo
           =link_to root_path do
             %img{src: asset_path('logo_200x89.png'), title: "3Void"}
