@@ -1,7 +1,7 @@
 PATH
-  remote: ../engines/markdown_articles
+  remote: ../engines/marti
   specs:
-    markdown_articles (0.0.1)
+    marti (0.0.1)
       pygments.rb
       rails (~> 4.0.0)
       redcarpet
@@ -156,7 +156,7 @@ DEPENDENCIES
   haml
   jbuilder (~> 1.2)
   jquery-rails
-  markdown_articles!
+  marti!
   pg
   pry-nav
   rails (= 4.0.0)

@@ -14,7 +14,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'redcarpet'
-gem 'markdown_articles', path: "../engines/markdown_articles"
+gem 'marti', path: "../engines/marti"
 
 group :test do
   gem 'rspec-rails', '~>2.0'
