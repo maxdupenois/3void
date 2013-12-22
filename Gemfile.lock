@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/maxdupenois/marti.git
+  remote: git://github.com/maxdupenois/marti.git
   revision: c282cb0da22b9256af773697b06cc4d623842249
   specs:
     marti (0.0.1)
