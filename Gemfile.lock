@@ -1,5 +1,6 @@
-PATH
-  remote: ../engines/marti
+GIT
+  remote: https://github.com/maxdupenois/marti.git
+  revision: c282cb0da22b9256af773697b06cc4d623842249
   specs:
     marti (0.0.1)
       pygments.rb
@@ -69,14 +70,14 @@ GEM
     multi_json (1.7.8)
     pg (0.16.0)
     polyglot (0.3.3)
-    posix-spawn (0.3.6)
+    posix-spawn (0.3.8)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
     pry-nav (0.2.3)
       pry (~> 0.9.10)
-    pygments.rb (0.5.2)
+    pygments.rb (0.5.4)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
     rack (1.5.2)

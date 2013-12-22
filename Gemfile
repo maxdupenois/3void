@@ -14,7 +14,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'redcarpet'
-gem 'marti', git: 'https://github.com/maxdupenois/marti.git'
+gem 'marti', github: 'maxdupenois/marti'
 
 group :test do
   gem 'rspec-rails', '~>2.0'
