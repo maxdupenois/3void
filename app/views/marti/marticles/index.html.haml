@@ -1,3 +1,4 @@
+=content_for(:page_title, "Articles")
 #articles
   -@marticles.select(&:published).each do |article|
     %a.article-block{href: marti.marticle_path(path: article.path)}
