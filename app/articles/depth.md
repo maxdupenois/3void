@@ -24,8 +24,12 @@ I would go about creating such a gem and how it would work.
 
 That's what I thought too, however I set myself the constraint of not using
 recursion. Depth wouldn't know the potential complexity of a given hash so
-there's no prior knowledge of how deep you could end up going. In such a case
-the possiblity of a `StackOverflowError` looms large.
+there's no prior knowledge of how deep you could end up going. In such a cases
+I don't like using recursion, the probability of hitting a
+`StackOverflowError` may be small\*, but I will always choose to avoid it given
+the option.
+
+\* _As was pointed out by <a href="http://samwho.co.uk/">Sam</a> if you end up with data structures that nested you have other potential issues._
 
 ###How does you use it?
 
