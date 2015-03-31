@@ -7,6 +7,10 @@
 
 %ul.nav.nav-tabs
   %li.active
+    %a{href: '#depth', data: {toggle: 'tab'}} Depth
+  %li
+    %a{href: '#bemazed', data: {toggle: 'tab'}} Bemazed
+  %li
     %a{href: '#marti', data: {toggle: 'tab'}} Marti
   %li
     %a{href: '#dilemma', data: {toggle: 'tab'}} Dilemma
@@ -20,6 +24,12 @@
     %a{href: '#basic-game-engine', data: {toggle: 'tab'}} Basic Game Engine
 .tab-content
   #marti.tab-pane.active
+    .project
+      =render partial: "depth"
+  #marti.tab-pane
+    .project
+      =render partial: "bemazed"
+  #marti.tab-pane
     .project
       =render partial: "marti"
   #dilemma.tab-pane
