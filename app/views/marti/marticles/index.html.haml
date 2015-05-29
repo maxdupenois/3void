@@ -1,13 +1,15 @@
 =content_for(:page_title, "Articles")
-#articles
+
+#articles.row
   -@marticles.select(&:published).each do |article|
-    %a.article-block{href: marti.marticle_path(path: article.path)}
-      .article-details
-        %h3.article-title=article.title
-        %h6.article-date=pretty_date(article.last_updated_at)
-        %h5.article-author by #{article.author}
-      .article-content
-        =strip_tags(article.extract).html_safe
-        &hellip;
-      .article-footer
-        =(article.tags || "unknown")
+    .col-md-6.col-sm-12
+      %a.article-block{href: marti.marticle_path(path: article.path)}
+        .article-details
+          %h3.article-title=article.title
+          %h6.article-date last updated: #{pretty_date(article.last_updated_at)}
+          %h5.article-author by #{article.author}
+        .article-content
+          =strip_tags(article.extract).html_safe
+          &hellip;
+        .article-footer
+          =(article.tags || "unknown")
