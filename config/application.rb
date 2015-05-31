@@ -8,10 +8,13 @@ Bundler.require(:default, Rails.env)
 
 module Void
   class Application < Rails::Application
+    require Rails.root.join("lib/custom_exceptions_routing")
+    config.exceptions_app = CustomExceptionsRouting.new(Rails.public_path)
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
+
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
