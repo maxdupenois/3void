@@ -1,8 +1,8 @@
--content_for(:page_title, "Article - #{@marticle.title}")
+-content_for(:page_title, "Article - #{marticle.title}")
 .article
   .article-header
-    %h2.article-title=@marticle.title
-    %h4.article-author by #{@marticle.author}
+    %h2.article-title=marticle.title
+    %h4.article-author by #{marticle.author}
 
 
-  =@marticle.content.html_safe
+  =marticle.content.html_safe

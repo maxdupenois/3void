@@ -1,7 +1,7 @@
 =content_for(:page_title, "Articles")
 
 #articles.row
-  -@marticles.select(&:published).each do |article|
+  -marticles.select(&:published).each do |article|
     .col-md-6.col-sm-12
       %a.article-block{href: marti.marticle_path(path: article.path)}
         .article-details
