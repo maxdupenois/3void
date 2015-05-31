@@ -1,12 +1,3 @@
-GIT
-  remote: git://github.com/maxdupenois/marti.git
-  revision: 6ff010a8cb54adcb09d294505324c6907519709b
-  specs:
-    marti (0.0.2)
-      pygments.rb
-      rails (~> 4.1.0)
-      redcarpet
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -64,6 +55,10 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    marti (0.1.0)
+      pygments.rb
+      rails (~> 4.1.0)
+      redcarpet
     method_source (0.8.2)
     mime-types (1.25.1)
     minitest (5.7.0)
@@ -169,7 +164,7 @@ DEPENDENCIES
   haml
   jbuilder (~> 1.2)
   jquery-rails
-  marti!
+  marti (>= 0.1.0)
   pg
   pry-nav
   rails (= 4.1.2)

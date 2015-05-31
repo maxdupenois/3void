@@ -14,7 +14,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'redcarpet'
-gem 'marti', github: 'maxdupenois/marti'
+gem 'marti', '>= 0.1.0' #github: 'maxdupenois/marti'
 gem 'rails_12factor'
 
 group :test do
