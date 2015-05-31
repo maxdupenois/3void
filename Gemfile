@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0'
-ruby '2.1.1'
+gem 'rails', '4.1.2'
+ruby '2.2.0'
 
 gem 'pg'
 gem 'haml'

@@ -2,6 +2,7 @@ $title: The JSON Dilemma
 $author: Max
 $tags: rails, api, technical, json
 $published: true
+$last_updated_at: 2014-05-31 11:57:49
 
 ## JSON Parsing in rails
 
