@@ -11,7 +11,7 @@ _code samples for this article_: [Gist](https://gist.github.com/maxdupenois/9509
 So there are situations when you want to load an external javascript
 library, say for example the Facebook javascript SDK. There are multiple ways
 of doing this but you want to fetch the current version so you need to hit
-an actual endpoint and download it, rather than use an npm package or similar
+an actual endpoint and download it, rather than use an npm package or similar.
 However, because you are a demanding developer who will not brook second class
 code, you want the library to be available via standard es6 style `import`s (or `require`s if that's your jam). There are probably a number of ways of getting to a good solution but this is the one I came to, maybe it'll be helpful to you too.
 
@@ -57,8 +57,8 @@ export default function(url) {
 
 As you can see I'm using the `defer` implementation provided by the `q` library
 ([q's github](https://github.com/kriskowal/q "q"))
-but what ever promise structure you prefer this code will
-probably not differ to much. Note that I'm storing the promise for each url,
+but whatever promise structure you prefer this code will
+probably not differ too much. Note that I'm storing the promise for each url,
 that way if something uses the `scriptLoader` it can be imported all over the
 shop and we needn't worry about repeatedly getting the same external libraries.
 
@@ -66,8 +66,8 @@ Blah blah, this is nothing new just worth repeating in prep for the next bit.
 
 ###Exporting the SDK
 
-Cool, we can load a script, how do we make it's objects available
-through a standard `import` like structure. Well we need to create a module that
+Cool, we can load a script, how do we make its objects available
+through a standard `import` like structure? Well we need to create a module that
 actually loads our required SDK. Keeping Facebook's SDK as our example we
 can have an fb.js file:
 
@@ -82,7 +82,7 @@ scriptLoader('//connect.facebook.net/en_UK/sdk.js').then(() => {
 });
 ```
 
-A good start, how do we actually access the Facebook object (`FB`). Well
+A good start, but how do we actually access the Facebook object (`FB`)? Well
 my first approach was to use another promise, like so:
 
 
@@ -103,7 +103,7 @@ export default deferred.promise;
 ```
 
 This is pretty cool, however, it can get it bit too nested-callbacky for my
-liking. For example, to use it to call a `FB` function looks like:
+liking. For example, using it to call a `FB` function currently looks like:
 
 ```javascript
 import facebook from 'fb';
@@ -129,7 +129,7 @@ FB.ui({ ... }, (response) => {
 });
 ```
 
-and have that simply work, even if the actual FB object hasn't yet been loaded.
+and have that simply work, even if the actual `FB` object hasn't yet been loaded.
 So how do we get there?
 
 ECMAScript 6 actually has a cool new concept to replace the previous, poorly
@@ -322,7 +322,7 @@ class BlockingProxyHandler {
 But JavaScript is single threaded and the above will not relinquish
 control of the thread so it's debatable as to whether or not it will ever
 actually be able to be updated. Even if it worked it would grind your browser
-to a halt. Not being threaded means JavaScript can't `sleep` a process
+to a halt, not being threaded means JavaScript can't `sleep` a process
 for a given time and then restart it in context.
 
 So what can we do if we need a result from the call to the external SDK? We can't
